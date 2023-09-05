@@ -88,7 +88,8 @@ ActiveRecord::Schema.define(version: 2023_09_03_170552) do
   create_table "to_gos", force: :cascade do |t|
     t.integer "shop_id", null: false
     t.string "name", null: false
-    t.string "date_time", null: false
+    t.date "date", null: false
+    t.string "time"
     t.string "address"
     t.text "body"
     t.datetime "created_at", precision: 6, null: false

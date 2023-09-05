@@ -1,4 +1,4 @@
-class Public::HomesController < ApplicationController
+class Shop::HomesController < ApplicationController
   
   def top
     

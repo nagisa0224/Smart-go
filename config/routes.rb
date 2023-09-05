@@ -8,19 +8,20 @@ Rails.application.routes.draw do
   namespace :admin do
     get "top" => "homes#top"
     
-    resources :shops, except: [:new, :create, :destroy]
+    resources :shop, except: [:new, :create, :destroy]
     
   end
   
   
   
   devise_for :users, skip: [:passwords], controllers: {
-    registrations: "public/registrations",
-    sessions: "public/sessions"
+    registrations: "shop/registrations",
+    sessions: "shop/sessions"
   }
+
   
   
-  scope module: :public do
+  scope module: :shop do
     root "homes#top"
     get "/about" => "homes#about"
     get "/shops/my_page" => "shops#show"
