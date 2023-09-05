@@ -35,6 +35,8 @@
     </header>
     
     <main>
+      <%= link_to "ユーザーログアウト", destroy_user_session_path,method: :delete %>
+      <%= link_to "ショップログアウト", destroy_shop_session_path,method: :delete %>
       <%= yield %>
     </main>
     

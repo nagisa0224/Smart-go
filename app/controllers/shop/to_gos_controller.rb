@@ -6,8 +6,11 @@ class Shop::ToGosController < ApplicationController
   
   def create
     @to_go = ToGo.new(to_go_params)
-    if @to_go.save
-      redirect_to to_go_path(@to_go)
+    @to_go.shop_id = current_shop.id
+    # byebug
+    
+    if @to_go.save!
+      redirect_to to_go_path(@to_go.id)
     else
       render :new
     end

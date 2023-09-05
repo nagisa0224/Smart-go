@@ -1,7 +1,8 @@
 class ToGo < ApplicationRecord
   has_many :reservation_details
-  belongs_to :shops
+  belongs_to :shop
   
-  validates :name, :date, presence: true
+  #:dateまだ入れていない
+  validates :name, presence: true
   
 end
