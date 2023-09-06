@@ -3,7 +3,8 @@ class CreateToGos < ActiveRecord::Migration[6.1]
     create_table :to_gos do |t|
       t.integer :shop_id, null: false
       t.string :name, null: false
-      t.string :date_time, null: false
+      t.date :date, null: false
+      t.string :time
       t.string :address
       t.text :body
       t.timestamps

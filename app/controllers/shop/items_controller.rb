@@ -1,4 +1,4 @@
-class Public::ToGosController < ApplicationController
+class Shop::ItemsController < ApplicationController
   
   def new
     
