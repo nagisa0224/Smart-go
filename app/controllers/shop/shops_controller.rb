@@ -1,4 +1,4 @@
-class S::ShopsController < ApplicationController
+class Shop::ShopsController < ApplicationController
   
   def show
     
