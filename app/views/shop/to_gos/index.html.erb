@@ -20,7 +20,7 @@
             <% @to_gos.each do |to_go| %>
               <tr>
                 <td scope="row">
-                  <%= link_to to_gos_path(to_go.id), class: "link" do %>
+                  <%= link_to to_go_path(to_go.id), class: "link" do %>
                   <%= to_go.name %>
                   <% end %>
                 </td>
