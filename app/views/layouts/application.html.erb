@@ -19,15 +19,22 @@
             <!--logo-->
           </div>
           <ul class="flex">
+            <!-- devise問題　コメントアウトした後shopに変更 -->
             <% if shop_signed_in? %>
               <li><%= link_to "予約一覧", to_gos_path %></li>
               <li><%= link_to "商品一覧", items_path %></li>
               <li><%= link_to "home", shops_my_page_path %></li>
+              <!-- 下のパス　shop部分コメントアウトした後shopに変更 -->
+              <li><%= link_to "ユーザーログアウト", destroy_shop_session_path,method: :delete %></li>
+              <li><%= link_to "ショップログアウト", destroy_shop_session_path,method: :delete %></li>
             <% else %>
               <li><%= link_to "About", about_path %></li>
-              <li><%= link_to "ログイン", new_user_session_path %></li>
-              <li><%= link_to "新規登録", new_user_registration_path %></li>
-              
+              <!-- 下の2行パス　shop部分コメントアウトした後shopに変更 -->
+              <li><%= link_to "ログイン", new_shop_session_path %></li>
+              <li><%= link_to "新規登録", new_shop_registration_path %></li>
+              <!-- 緊急追加 -->
+              <li><%= link_to "ユーザーログアウト", destroy_shop_session_path,method: :delete %></li>
+              <li><%= link_to "ショップログアウト", destroy_shop_session_path,method: :delete %></li>
             <% end %>
           </ul>
         </div>
@@ -35,8 +42,6 @@
     </header>
     
     <main>
-      <%= link_to "ユーザーログアウト", destroy_user_session_path,method: :delete %>
-      <%= link_to "ショップログアウト", destroy_shop_session_path,method: :delete %>
       <%= yield %>
     </main>
     
