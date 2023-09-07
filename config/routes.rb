@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  devise_for :shops
+  #devise_for :shops
   devise_for :admins, skip: [:registrations, :passwords], controllers:{
     sessions: "admin/sessions"
   }
@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   end
   
   
-  
-  devise_for :users, skip: [:passwords], controllers: {
+  #devise問題　shopに変更
+  devise_for :shops, controllers: {
     registrations: "shop/registrations",
     sessions: "shop/sessions"
   }
